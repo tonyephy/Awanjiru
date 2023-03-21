@@ -24,6 +24,7 @@ header
 {
     background:#fa0303ec;
     text-align:center;
+    background-position: 100%;
 }
 .menu-bar ul
 {
@@ -40,29 +41,32 @@ header
 }
 .menu-bar ul li
 {
+    font-size: 30px;
     text-decoration:darkorange;
     color:rgb(35, 211, 50);
 }
-section div h2
+a:hover
 {
-    font: size 30px;
-    color-scheme:hsl(0, 4%, 5%);
-    background-color: blanchedalmond;
-    width:80%;
+color: #09f809
 }
-section img 
+a:visited
 {
-    margin-left: 180px;
-    margin-top: 50px;
-    margin-bottom: 100;
-    border: 100px;
+    color: #6114ee;
+}
+a:active
+{
+    color: #fc000d;
+}
+.active
+{
+  font-size: 30px;
 }
 .search
 {
-    padding-right: 5px;
-    padding-left: 1px;
-    margin-right: 50px;
-    width: 30px;
+    margin-left: 1cm;
+    background-color: #14c5dc;
+    width: 2cm;
+    height: 1cm;
 }
 .container1
 {
@@ -87,6 +91,20 @@ section img
    shape-margin:49px;
    border-spacing: 1cm;
 
+}
+.map
+{
+    background-size: 50px;
+    color: cyan;
+    font-size: 50px;
+    
+}
+.map iframe
+{
+    width: 50%;
+    margin-bottom: 10px;
+    width: 5cm;
+    height: 4cm;
 }
 .container1 h2
 {
@@ -248,10 +266,11 @@ section img
     background-color: fuchsia;
     font-size: 45px;
 }
-footer
+.footer
 {
     background-color:hwb(276 88% 8% / 0.945);
     text-align:center;
+    background-size: auto;
     padding:5px;
     color: #07ec07;
     font-size: 30px;
