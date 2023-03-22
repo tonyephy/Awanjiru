@@ -20,6 +20,21 @@ header
     letter-spacing:1px;
     color: greenyellow;
 }
+.favicon
+{
+    margin-left: 1cm;
+    padding-left: 2px;
+    align-content: center;
+    float: left;
+    border-radius: 1cm;
+}
+.favicon img
+{
+  border-radius: 0.5cm;
+  width: 3.5cm;
+  height: 2.5cm;
+  margin-top: 6px;
+}
 .search
 {
     margin-left: 1cm;
@@ -43,6 +58,7 @@ header
     background:#fa0303ec;
     text-align:center;
     background-position: 100%;
+    border-width: auto;
 }
 .menu-bar ul
 {
@@ -53,9 +69,10 @@ header
 .menu-bar ul li
 {
     width:150px;
+    margin-bottom: 5px;
     margin:15px;
     padding:20px;
-    height:30px ;
+    height:80px ;
 }
 .menu-bar ul li
 {
