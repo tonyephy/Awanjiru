@@ -4,6 +4,16 @@
     margin:0;
     box-sizing: border-box;
 }
+/*CSS for small devices*/
+@media only screen and(max-width: 600px)
+{
+body{
+    font-size:14px;
+}
+#header{
+    display: none;
+}
+}
 body
 {
     background-image:url(tea.jpg);
@@ -81,7 +91,7 @@ header
 }
 a:hover
 {
-color: #09f809
+color: #09f809;
 }
 a:visited
 {
@@ -128,6 +138,33 @@ color: #fc000d;
     margin-bottom: 10px;
     width: 5cm;
     height: 4cm;
+}
+form{
+    background:violet;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 100%;
+    max-width:1600px;
+    border-radius:10px;
+}
+form input, form textarea{
+    border: 0;
+    margin: 10px;
+    padding: 20px;
+    font-size:16px;
+    color:black;
+}
+form button{
+    padding:15px;
+    background:#bbff00;
+    color:brown;
+    font-size:15px;
+    border: 0;
+    cursor: pointer;
+    width: 150px;
+    margin:20px auto 0;
+    border-radius:30px;
 }
 .container1 h2
 {
@@ -297,4 +334,18 @@ color: #fc000d;
     padding:5px;
     color: #07ec07;
     font-size: 30px;
-    letter-spacing: 3px;}
+    letter-spacing: 3px;
+}
+.icons
+{
+    padding:15px;
+
+}
+.validation
+{
+    text-align:center;
+}
+.form
+{
+    text-align:center;
+}

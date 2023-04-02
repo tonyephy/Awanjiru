@@ -19,51 +19,66 @@
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="contact.html">CONTACT</a></li>
-            <li> 
-                <div class="search">
-                <input class="srch" type="search" placeholder="type text">
-                <a href="#"><button class="btn">search</button></a>
-            </div></li>
         </ul>
     </nav>
     <section>
-        <section>
          <div class="contact">
 			<h2>Contact Antony@soft tech</h2>
 			<article>About us we are located in Nairobi Tommboya streets Cigma plaza building 10th floor
 				You can reach us via tell:0741375910
 			</article>
 
-			<form>
+			<form onsubmit="sendEmail();reset(); return false;">
                 <fieldset>
-                <legend>Please type  your feedback</legend>
+                <legend>We are happy you visited Us Welcome again,fill your feedback</legend>
+                <div class="form">
 				<label for="name">Name:</label>
-				<input type="text" id="name"placeholder="type name" name="name"><br>
+				<input type="text" id="name" placeholder="Type your full name" name="name" required>
                 <label for="email">Email:</label>
-				<input type="email" id="email"placeholder="type your email" name="email"><br>
-                <label for="Tell">Tell</label>
-                <input type="numeric" id="tell" placeholder="type mobile no" name="Tell"><br>
+				<input type="email" id="email"placeholder="Type your your email" name="email" required><br>
+                <label for="Tell">Tell:</label>
+                <input type="tell" id="tell" placeholder="Type your mobile number" name="Tell"  required><br>
                 <label for="Gender">Gender:</label>
-                <input type="radio" name="radio">Male</input>
-                <input type="radio" name="radio">Female</input>
-                <input type="radio" name="radio">Others</input><br>
+                <input type="radio" name="radio" id="radio"  required>Male</input>
+                <input type="radio" name="radio" id="radio"  required>Female</input>
+                <input type="radio" name="radio" id="radio"  required>Others</input><br>
 				<label for="message">Message:</label><br>
-				<textarea id="message"placeholder="leave your msg here....." name="message"></textarea><br>
-
-				<input type="submit" value="Send">
-				<input type="reset" value="clear">
+				<textarea id="message"placeholder="how  can we help you?" name="message"  required></textarea><br>
+				<button type="submit" >Send</button>
+				<button type="reset" >clear</button>
+                </div>
                  </fieldset>
 			</form>
-          </div>
-		</section>
-        
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "tonylvan77@gmail.com",
+                    password : "075800gsq..",
+                    To : 'tonylvan77@gmail.com',
+                    From : document.getelementById("email").value,
+                    Subject : "New contact form Equiry",
+                    Body : "Name: "+document.getelementById("name").value
+                          +"<br> Email:" +document.getelementById("email").value 
+                          +"<br> Tell:" +document.getelementById("tell").value
+                          +"<br> Gender:" +document.getelementById("radio").value
+                          +"<br> Message:" +document.getelementById("message").value
+                }).the(
+                    message =>alert("message Sent Succesfully")
+                );
+            }
+        </script> 
     </section>
     <div class="footer">
         <div class="map">
             <article>Our location</article>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d255344.50201025937!2d35.93877157852735!3d-0.3154675566373173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1679402658336!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        
 <articles>Welcome to our site you can visit us via:</articles>
+<div class="icons">
 <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
 <a href="https://twiter.com/"><i class="fa-brands fa-twitter"></i></i></a>
 <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
@@ -71,7 +86,8 @@
 <a href="https://tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
 <a href="https://messager.com/"><i class="fa-solid fa-messages"></i></a>
 <a href="https://telegram.com/"><i class="fa-brands fa-telegram"></i></a>
-<p>Copyright& copy;2023, ANTONYNDUNG'U@ Software Developer</p>
+<p>Copyright& copy;2023, ANTONYNDUNG'U @ Software Developer</p>
+</div>
 </div>
 
 </body>
