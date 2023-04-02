@@ -89,7 +89,7 @@ header
     color: #bbff00;
     font-size: 30px;
 }
-a:hover
+li:hover
 {
 color: #09f809;
 }
@@ -192,7 +192,7 @@ form button{
     letter-spacing:4px;
     font-size: 30px;
     padding-top: 20px;
-    margin-left: 2cm;
+    margin-left: 0cm;
 }
 .container2 h3
 {
@@ -221,7 +221,7 @@ form button{
     margin-top: 1cm;
     width: 1500px;
     height: 650px;
-    margin-left: 5cm;
+    margin-left: 0cm;
 }
 .container3 h4
 {
@@ -239,7 +239,7 @@ form button{
     border-style: dashed;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    margin-left: 8cm;
+    margin-left: 0;
     width:1000px;
     height: 1200;
     border-color: rgba(128, 255, 0, 0.178);
@@ -258,7 +258,7 @@ form button{
     border-left:blueviolet ;
     border-bottom: #07ec07;
     margin-left: 0;
-    background-color: #14c5dc88;
+    background-color: #f01313e1;
     width:1000px;
     height: 1000px;
     font-size: 30px;
