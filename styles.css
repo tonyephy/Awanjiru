@@ -100,13 +100,12 @@ header
 .wrapper
 {
     margin-top:5px;
-    background: transparent;
+    background-color: #09f809;
     position:relative;
-    width:400px;
-    height:440px;
+    width:550px;
+    height:700px;
     border: 2px solid #fff;
     margin-left: 470px;
-    backdrop-filter: blur(50px);
     box-shadow:0 0 30px black;
     display:flex;
     justify-content: center;
@@ -137,6 +136,7 @@ transform: translateY(-60%);
 font-size:1em;
 color:#162938;
 font-weight: 500;
+font-size:15px;
 }
 .input-box input
 {
