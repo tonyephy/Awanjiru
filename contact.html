@@ -6,6 +6,34 @@
         content="width=device-width'initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/59d716ff35.js" crossorigin="anonymous"></script>
+        <script>
+         function validateForm(){
+            var name = document.getElementById("name").value;
+            var email =document.getElementById("email").value;
+            var tell=document.getElementById("tell").value;
+            var radio=document.getElementById("radio").value;
+            var message=document.getElementById("message").value;
+
+         // check if field name is empty
+         if(name==""){ 
+            alert("please enter your full name");
+         return false;
+        }
+        // check if field email is empty
+        if(email==""){ alert("Email must be filled");
+        return false;
+       }
+    // check if field tell is empty
+    if(tell==""){ alert("Tellphone number must be filled");
+        return false;
+      }
+      if(message==""){ alert(" You must write a Message to Us");
+        return false;
+      }
+        return true;
+         }
+         
+        </script>
     </head>
     <header>
         <h1>Software Developer</h1></header>
@@ -28,22 +56,22 @@
 				You can reach us via tell:0741375910
 			</article>
 
-			<form onsubmit="sendEmail(); reset(); return false;">
+			<form onsubmit="return validateForm()">
                 <fieldset>
                 <legend>We are happy for the visit , Welcome again fill in your feedback.</legend>
                 <div class="form">
 				<label for="name">Name:</label>
-				<input type="text" id="name" placeholder="Type your full name" name="name" required>
+				<input type="text" id="name" placeholder="Type your full name" name="name" >
                 <label for="email">Email:</label>
-				<input type="email" id="email"placeholder="Type your your email" name="email" required><br>
+				<input type="email" id="email"placeholder="Type your your email" name="email" ><br>
                 <label for="Tell">Tell:</label>
-                <input type="tell" id="tell" placeholder="Type your mobile number" name="Tell"  required><br>
+                <input type="tell" id="tell" placeholder="Type your mobile number" name="Tell"  ><br>
                 <label for="Gender">Gender:</label>
-                <input type="radio" name="radio" id="radio"  required>Male</input>
-                <input type="radio" name="radio" id="radio"  required>Female</input>
-                <input type="radio" name="radio" id="radio"  required>Others</input><br>
+                <input type="radio" name="radio" id="radio">Male</input>
+                <input type="radio" name="radio" id="radio"  >Female</input>
+                <input type="radio" name="radio" id="radio"  >Others</input><br>
 				<label for="message">Message:</label><br>
-				<textarea id="message"placeholder="how  can we help you?" name="message"  required></textarea><br>
+				<textarea id="message"placeholder="how  can we help you?" name="message"  ></textarea><br>
 				<button type="submit" >Send</button>
 				<button type="reset" >clear</button>
                 </div>
@@ -51,25 +79,7 @@
 			</form>
         </div>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            function sendEmail(){
-                Email.send({
-                    Host : "smtp.gmail.com",
-                    Username : "tonylvan77@gmail.com",
-                    password : "075800Gsq..",
-                    To : 'tonylvan77@gmail.com',
-                    From : document.getelementById("email").value,
-                    Subject : "New contact form Equiry",
-                    Body : "Name: "+document.getelementById("name").value
-                          +"<br> Email:" +document.getelementById("email").value 
-                          +"<br> Tell:" +document.getelementById("tell").value
-                          +"<br> Gender:" +document.getelementById("radio").value
-                          +"<br> Message:" +document.getelementById("message").value
-                }).the(
-                    message =>alert("message Sent Succesfully")
-                );
-            }
-        </script> 
+        
     </section>
     <div class="footer">
         <div class="map">

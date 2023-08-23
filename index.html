@@ -5,6 +5,26 @@
         <meta name="viewport"
         content="width=device-width'initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <?php include 'phpscript.php'; ?>
+        <script>
+            function validateForm(){
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+             
+             //script to check if email field is empty
+            if(email==""){
+                alert(" Alert!!! Please fill in a valid email");
+                return false;
+            }
+           
+            //script to check if password field is empty
+            if(password==""){
+                alert(" Alert!!! Please fill your password");
+                return false;
+            }
+            return true;
+        }
+        </script>
         <script src="https://kit.fontawesome.com/59d716ff35.js" crossorigin="anonymous"></script>
     </head>
     <header>
@@ -27,15 +47,15 @@
     <div class="wrapper">
         <div class="form1-box login">
             <h1 align="center">Login</h1>
-            <form1  action="#">
+            <form onsubmit="return validateForm()">
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="Email"font-size="60px" placeholder="Enter your email" required>
+                    <input type="email"font-size="60px" id="email" placeholder="Enter your email">
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" placeholder="Enter your password">
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
@@ -45,11 +65,11 @@
                 <button type="submit" class="btn">Login</button>
                 <div class="login-register">
                     <p>Don't have any account?
-                        <hr><a href="register.html">Register</a></p>
+                        <hr><a href="register.html">Register Now</a></p>
                 </div>
                 
                
-            </form1>
+            </form>
             
         </div>
     </div>
