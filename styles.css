@@ -18,6 +18,8 @@ body
 {
     background-image:url(tea.jpg);
     background-size: 500px;
+    height:5000px;
+    width:1500px;
     background-repeat: repeat;
     background-position: center;
 }
@@ -26,10 +28,11 @@ header
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: darkorange;
     text-align:center;
-    padding:20px;
+    padding:40px;
     font-size:40px;
     letter-spacing:1px;
     color: greenyellow;
+    width:1500px;
 }
 .favicon
 {
@@ -71,6 +74,8 @@ header
     text-align:center;
     background-position: 100%;
     border-width: 100%;
+    margin-right:0px;
+    width:1500px;
 }
 .menu-bar ul
 {
@@ -99,14 +104,14 @@ header
 }
 .wrapper
 {
-    margin-top:5px;
+    margin-top:10px;
     background-color: #fc1ed7;
     position:relative;
-    width:550px;
-    height:700px;
+    width:499px;
+    height:900px;
     border: 2px solid #fff;
-    margin-left: 270px;
-    box-shadow:0 0 30px black;
+    margin-left: 470px;
+    box-shadow:0 0 30px rgb(15, 240, 26);
     display:flex;
     justify-content: center;
     align-items:center;
@@ -114,13 +119,40 @@ header
 }
 .wrapper .form1-box
 {
+    margin-top:2px;
     width:100%;
     padding:40px;
+    height:90%;
+
+}
+.wrapper1
+{
+    margin-top:10px;
+    background-color: #bd14f0;
+    position:relative;
+    width:650px;
+    height:650px;
+    border: 10px solid #fff;
+    margin-left: 470px;
+    box-shadow:0 0 30px rgb(15, 240, 26);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+.wrapper1 .form2-box
+{
+    margin-top:2px;
+    width:100%;
+    padding:20px;
+    height:100%;
+    margin-bottom: 5px;
 
 }
 .input-box
 {
     position:relative;
+    box-shadow:0 0 30px rgb(243, 5, 5);
     height:50px;
     width:100%;
     border-bottom:2px solid hsla(84, 100%, 4%, 0.897);
@@ -142,7 +174,7 @@ font-size:15px;
 {
     width:100%;
     height:100%;
-    font-size: 25px;
+    font-size: 20px;
     background:transparent;
     border:none;
     outline:none;
@@ -310,7 +342,7 @@ form button{
     border-style: double;
     border-width: 2cm;
     width: 1450px;
-    height: 900px;
+    height: 1000px;
     border-top-color: #14c5dc;
     border-left-color: chartreuse;
     border-right-color: #ff0077;
@@ -348,7 +380,7 @@ form button{
     font-size: 40px;
     margin-top: 1cm;
     width: 1500px;
-    height: 650px;
+    height: 750px;
     margin-left: 0cm;
 }
 .container3 h4
@@ -368,7 +400,7 @@ form button{
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     margin-left: 0;
-    width:1000px;
+    width:1500px;
     height: 1200;
     border-color: rgba(128, 255, 0, 0.178);
     background-image:url(programmer.jpg) ;
@@ -387,8 +419,8 @@ form button{
     border-bottom: #07ec07;
     margin-left: 0;
     background-color: #f01313e1;
-    width:1000px;
-    height: 1000px;
+    width:1500px;
+    height: 2000px;
     font-size: 30px;
     border-width: 56px;
     color: #131212;

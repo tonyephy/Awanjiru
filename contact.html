@@ -11,7 +11,6 @@
             var name = document.getElementById("name").value;
             var email =document.getElementById("email").value;
             var tell=document.getElementById("tell").value;
-            var radio=document.getElementById("radio").value;
             var message=document.getElementById("message").value;
 
          // check if field name is empty
@@ -27,12 +26,11 @@
     if(tell==""){ alert("Tellphone number must be filled");
         return false;
       }
-      if(message==""){ alert(" You must write a Message to Us");
+      if(message==""){ alert(" Please write a Message to Us");
         return false;
       }
         return true;
          }
-         
         </script>
     </head>
     <header>
@@ -47,29 +45,37 @@
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="services.html">SERVICES</a></li>
             <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="testimon.html">TESTIMONIES</a></li>
         </ul>
     </nav>
     <section>
          <div class="contact">
 			<h2>Contact Antony@soft tech</h2>
-			<article>About us we are located in Nairobi Tommboya streets Cigma plaza building 10th floor
-				You can reach us via tell:0741375910
-			</article>
+			<article>About us we are located in Nairobi Tommboya streets Cigma plaza building 10th floor</article>
+				<p>You can reach us via the following methods below</p><br> 
+                <ol type="1">
+                    <p>Click link below to reach me via WHATSAPP</p>
+                    <li><a href="https://wa.me+254741375910" color:white;>Chat WhatsApp</a></li><br>
+                    <p>Click link below to reach me via mobile</p>
+                    <li> <a href="+254741375910">CLICK ME to call Me</a></li><br>
+                    <li> <a href="">CLICK ME VIA Tiktok</a></li><br>
+                </ol>
+			
 
 			<form onsubmit="return validateForm()">
                 <fieldset>
                 <legend>We are happy for the visit , Welcome again fill in your feedback.</legend>
                 <div class="form">
 				<label for="name">Name:</label>
-				<input type="text" id="name" placeholder="Type your full name" name="name" >
+				<input type="text" name="name"id="name" placeholder="Type your full name" name="name" >
                 <label for="email">Email:</label>
-				<input type="email" id="email"placeholder="Type your your email" name="email" ><br>
+				<input type="email"  name="email" id="email"placeholder="Type your your email" name="email" ><br>
                 <label for="Tell">Tell:</label>
-                <input type="tell" id="tell" placeholder="Type your mobile number" name="Tell"  ><br>
+                <input type="phone"  name="phone" id="tell" placeholder="Type your mobile number" name="Tell"  ><br>
                 <label for="Gender">Gender:</label>
-                <input type="radio" name="radio" id="radio">Male</input>
-                <input type="radio" name="radio" id="radio"  >Female</input>
-                <input type="radio" name="radio" id="radio"  >Others</input><br>
+                <input type="radio" name="radio" id="gender">Male</input>
+                <input type="radio" name="radio" id="gender"  >Female</input>
+                <input type="radio" name="radio" id="gender"  >Others</input><br>
 				<label for="message">Message:</label><br>
 				<textarea id="message"placeholder="how  can we help you?" name="message"  ></textarea><br>
 				<button type="submit" >Send</button>
@@ -78,7 +84,30 @@
                  </fieldset>
 			</form>
         </div>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function sendDataToWhatsApp() {
+  // Get the form data.
+  var name = document.querySelector('input[name="name"]').value;
+  var phone = document.querySelector('input[name="phone"]').value;
+  var gender = document.querySelector('input[name="gender"]:checked').value;
+  var message = document.querySelector('input[name="message"]').value;
+  var email = document.querySelector('input[name="email"]').value;
+
+  // Create the WhatsApp link.
+  var whatsappLink = 'https://wa.me/254741375910?text=' + name + '%20' + gender + '%20' + message + '%20' +email;
+
+  // Open the WhatsApp link in a new window.
+  window.open(whatsappLink, '_blank');
+}
+
+// Attach the event listener to the submit button.
+document.querySelector('input[type="submit"]').addEventListener('click', sendDataToWhatsApp);
+</script>
+</body>
+</html>
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
         
     </section>
     <div class="footer">
